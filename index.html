@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>芃禾國際｜街友關懷行動</title>
+  <meta name="description" content="在台北車站發放便當與物資，邀請志工加入關懷行動。讓愛被看見，把善傳下去。">
+
+  <style>
+    :root{ --ink:#111; --bg:#fff; --muted:#6b6b6b; --line:#e2e2e2; --accent:#4caf50 }
+    *{ box-sizing:border-box }
+    body{ margin:0; background:var(--bg); color:var(--ink); font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Microsoft JhengHei",sans-serif; line-height:1.6 }
+    img{ display:block; max-width:100%; height:auto }
+
+    .wrap{ max-width:1040px; margin:0 auto; padding:0 16px }
+    .topbar{ border-bottom:2px solid var(--line); background:#fff; position:sticky; top:0; z-index:10; box-shadow:0 2px 6px rgba(0,0,0,0.05) }
+    .topbar .wrap{ display:flex; align-items:center; justify-content:space-between; padding:14px 16px }
+    .brand{ font-weight:900 }
+
+    .hero{ border-bottom:2px solid var(--line); background:linear-gradient(135deg,#f0fff4,#ffffff) }
+    .hero .wrap{ display:flex; align-items:center; justify-content:space-between; gap:24px; padding:42px 16px }
+    .headline{ font-size:clamp(32px,7vw,72px); line-height:1.2; font-weight:900; color:var(--accent); white-space:nowrap }
+    .sub{ color:var(--muted); max-width:46ch; font-size:clamp(20px,3vw,28px); line-height:1.5; margin-top:16px }
+    .cta{ display:flex; gap:12px; margin-top:24px }
+    .btn{ border:2px solid var(--accent); padding:14px 22px; font-weight:900; background:var(--accent); text-decoration:none; color:#fff; font-size:18px; border-radius:6px; transition:.3s }
+    .btn:hover{ background:#388e3c; border-color:#388e3c }
+
+    .hero-figure{ border-radius:12px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.1); flex-shrink:0; max-width:400px; }
+    .hero-figure img{ width:100%; height:auto; object-fit:cover; display:block; }
+
+    .strip{ border-bottom:2px solid var(--line); background:#fafafa }
+    .strip .wrap{ padding:24px 0 }
+    .rail{ display:grid; grid-auto-flow:column; grid-auto-columns:minmax(280px, 1fr); gap:16px; overflow:auto; scrollbar-width:thin; padding-bottom:8px }
+    .tile{ border:1px solid var(--line); background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.06) }
+    .tile img{ aspect-ratio:4/3; object-fit:cover; }
+    .tile p{ margin:12px 14px; font-size:18px }
+
+    .section{ border-bottom:2px solid var(--line); background:#fff }
+    .section .wrap{ padding:48px 16px }
+    h2{ font-size:32px; margin:0 0 24px; font-weight:900; color:var(--accent); text-align:center }
+    .cols{ display:grid; grid-template-columns:1fr 1fr; gap:24px }
+    .card{ border:1px solid var(--line); padding:24px; background:#f9fef9; font-size:18px; line-height:1.8; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.05); position:relative; overflow:hidden }
+    .card::before{ content:""; position:absolute; top:0; left:0; width:100%; height:6px; background:var(--accent) }
+
+    footer{ background:#111; color:#fff; padding:26px 16px; font-size:16px; text-align:center }
+    footer a{ color:#fff; text-decoration:underline }
+
+    .joinbar{ position:sticky; bottom:0; background:#fff; border-top:2px solid var(--line); box-shadow:0 -2px 6px rgba(0,0,0,0.05) }
+    .joinbar .wrap{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:20px 16px; font-size:18px; text-align:left }
+    .joinbar b{ font-weight:900 }
+    .joinbar .btn{ background:var(--accent); border-color:var(--accent); color:#fff }
+    .joinbar .btn:hover{ background:#388e3c; border-color:#388e3c }
+
+    @media (max-width:840px){ 
+      .hero .wrap{ flex-direction:column; align-items:flex-start }
+      .headline{ white-space:normal }
+      .hero-figure{ max-width:100%; }
+      .joinbar .wrap{ flex-direction:column; align-items:center; text-align:center }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <div class="brand" style="font-size:32px; display:flex; align-items:center; font-weight:900;"><img src="https://i.postimg.cc/tgK31Rzv/favicon-2.png" alt="芃禾國際圖示" style="height:32px; width:32px; display:inline-block; margin-right:8px;">芃禾國際</div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1 class="headline">芃禾國際｜志工團隊</h1>
+        <p class="sub">✨ 愛在行動中 ✨<br>一個擁抱、一句陪伴、一份餐食，<br>都能讓生命多一點光。</p>
+        <div class="cta">
+          <a class="btn" href="https://line.me/ti/p/nNPVCeNkG9" target="_blank" rel="noopener">線上諮詢</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img src="https://i.postimg.cc/50fcMJFT/15.jpg" alt="右上角代表照片">
+      </figure>
+    </div>
+  </section>
+
+  <section class="strip" id="actions">
+    <div class="wrap">
+      <div class="rail">
+        <article class="tile">
+          <img src="https://i.postimg.cc/d37yszbm/11.jpg" alt="看到長輩的笑容">
+          <p>看到長輩的笑容、聽見大家的笑聲，就是我們最大的收穫。</p>
+        </article>
+        <article class="tile">
+          <img src="https://i.postimg.cc/9QcyTNZV/12.jpg" alt="育幼院花藝課程">
+          <p>在育幼院的花藝課程裡，孩子們用雙手創造出屬於自己的美麗。</p>
+        </article>
+        <article class="tile">
+          <img src="https://i.postimg.cc/sfcjx6j5/13.jpg" alt="可愛生命感受到溫暖與安全">
+          <p>每一份付出，都讓這些可愛的生命感受到溫暖與安全。</p>
+        </article>
+        <article class="tile">
+          <img src="https://i.postimg.cc/kG1PcHGZ/14.jpg" alt="街友朋友們感受到溫飽與關懷">
+          <p>炎炎夏日裡，讓街友朋友們感受到一份溫飽與真切的關懷。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap grid">
+      <h2>我們在做什麼</h2>
+      <div class="cols">
+        <div class="card">
+          <p>芃禾國際的志工隊，正在持續走入不同角落：<br>
+          🌱 陪伴育幼院的孩子，讓笑聲取代孤單。<br>
+          🌱 在養老院傾聽長者的故事，換來滿滿笑容。<br>
+          🌱 為街友送上一份素食便當，傳遞「你不孤單」。<br>
+          🌱 支持素食合作，讓善念延續在餐桌。<br>
+          🌱 關懷流浪動物，給牠們一個溫暖的守護。</p>
+        </div>
+        <div class="card">
+          <p>我們相信，志工不是「付出」，而是「同行」。<br>在陪伴的路上，我們彼此分享故事、傳遞微笑與支持。<br>因為每一份善意，都是在告訴世界：<br>「愛，其實很簡單。」<br>它可以是一句問候、一個擁抱，或一雙願意牽起的手，<br>讓需要的人不再孤單，讓希望在城市的角落綻放。</p>
+        </div>
+      </div>
+      <div class="card">
+        <p>目前芃禾國際已匯聚多個分會與導師，目標是把善的循環持續傳播下去。「芃然共生，禾心為善」是我們的初衷，歡迎加入志工隊，一起把愛留給真正需要的人。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="join">
+    <div class="wrap grid">
+      <h2>加入我們</h2>
+      <div class="card" style="text-align:center;">
+        <p>💖 一起加入芃禾國際志工隊<br>成為志工、捐贈物資、分享訊息、講師</p>
+        <p><a class="btn" href="https://line.me/ti/p/nNPVCeNkG9" target="_blank" rel="noopener">立即參與</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>© 芃禾國際 Penghe. 以善為名，持續行動。｜<a href="https://line.me/ti/p/nNPVCeNkG9" target="_blank" rel="noopener">LINE 聯絡我們</a></p>
+    </div>
+  </footer>
+
+  <div class="joinbar">
+    <div class="wrap">
+      <span><b>一起讓城市更有溫度</b> — 加入志工或捐助行動</span>
+      <a class="btn" href="https://line.me/ti/p/nNPVCeNkG9" target="_blank" rel="noopener">立即參與</a>
+    </div>
+  </div>
+</body>
+</html>

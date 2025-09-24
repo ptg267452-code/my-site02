@@ -1,7 +1,4 @@
-### robots.txt
-```
 User-agent: *
 Allow: /
 
-Sitemap: https://ptg267452-code.github.io/my-site02/sitemap.xml
-```
+Sitemap: https://vegan.pengheco.com/sitemap.xml
